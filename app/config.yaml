@@ -1,0 +1,64 @@
+chat:
+  quick_prompts:
+    # Agents
+    knowledge:
+      - "What is Agno?"
+      - "Tell me about Learning Machines"
+      - "Summarize the key features of Agno"
+
+    mcp:
+      - "What is Agno?"
+      - "Tell me about Learning Machines"
+      - "Summarize the key features of Agno"
+
+    dash:
+      - "Who won the most F1 races in 2019?"
+      - "Show the points gap between Hamilton and Verstappen by season"
+      - "Which circuits had the most DNFs in 2020?"
+
+    guard:
+      - "The auth service is returning 503 errors. Can you help?"
+      - "Create a ticket for the broken CI pipeline"
+      - "Check the health of the payments-api"
+
+    gcode:
+      - "Build a command-line todo app: add, list, done, delete. Persist to JSON. Write pytest tests and run them."
+      - "Create a Python library that parses and evaluates math expressions like '2 + 3 * (4 - 1)', with tests."
+      - "Build a URL shortener with an in-memory store: shorten, resolve, list stats. Include a demo script."
+
+    pal:
+      - "Save a note: quarterly planning meeting moved to Friday 3pm"
+      - "What notes have I saved recently?"
+      - "Save a bookmark: https://docs.agno.com -- Agno documentation"
+
+    relay:
+      - "Help me plan a vacation for next month"
+      - "I need to organize a team dinner for 12 people"
+      - "Plan a 3-day trip to Tokyo with a $2000 budget, focused on food and culture"
+
+    scout:
+      - "What is our PTO policy?"
+      - "Find the incident response runbook"
+      - "How do I request a new laptop?"
+
+    sentinel:
+      - "Process a $250 refund for customer C-1042 due to a billing error"
+      - "Export all data for customer C-3021 for a GDPR request"
+      - "Delete user account U-7788 per their closure request"
+
+    seek:
+      - "What is Agno?"
+      - "Compare agno to other agent frameworks"
+      - "How do I build the best agentic system?"
+
+    # Teams
+    research-team:
+      - "Research Anthropic comprehensively -- products, people, and market position"
+      - "What do our internal docs say about AI strategy vs industry trends?"
+      - "Research OpenAI -- enterprise products and recent developments"
+
+    # Workflows
+    daily-brief:
+      - "Generate my morning briefing"
+      - "What's on my calendar today and any important emails?"
+      - "Brief me on today's priorities"
