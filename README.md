@@ -62,6 +62,43 @@ railway down --service agno-demo
 railway down --service pgvector
 ```
 
+### Production Operations
+
+**Load data and knowledge:**
+```sh
+# Knowledge agent — Agno documentation
+railway run python -m agents.knowledge.scripts.load_knowledge
+
+# Dash — table schemas, validated queries, and business rules
+railway run python -m agents.dash.scripts.load_knowledge
+
+# Dash — F1 data (1950-2020)
+railway run python -m agents.dash.scripts.load_data
+
+# Scout — source metadata, routing rules, and patterns
+railway run python -m agents.scout.scripts.load_knowledge
+```
+
+**View logs:**
+```sh
+railway logs --service agno-demo
+```
+
+**Run commands in production:**
+```sh
+railway run python -m app.main  # CLI mode
+```
+
+**Redeploy after changes:**
+```sh
+railway up --service agno-demo -d
+```
+
+**Open dashboard:**
+```sh
+railway open
+```
+
 ## What's Included
 
 ### Agents

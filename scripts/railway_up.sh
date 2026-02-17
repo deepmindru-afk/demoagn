@@ -78,20 +78,18 @@ railway add --service agno-demo \
     --variables "RUNTIME_ENV=prd" \
     --variables "WAIT_FOR_DB=True" \
     --variables "OPENAI_API_KEY=${OPENAI_API_KEY}" \
+    --variables "ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}" \
+    --variables "GOOGLE_API_KEY=${GOOGLE_API_KEY}" \
+    --variables "EXA_API_KEY=${EXA_API_KEY}" \
+    --variables "PARALLEL_API_KEY=${PARALLEL_API_KEY}" \
+    --variables "GITHUB_TOKEN=${GITHUB_TOKEN}" \
     --variables "PORT=8000"
-
-# Pass optional API keys if set
-[[ -n "$ANTHROPIC_API_KEY" ]] && railway variables set "ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}" --service agno-demo
-[[ -n "$GOOGLE_API_KEY" ]]    && railway variables set "GOOGLE_API_KEY=${GOOGLE_API_KEY}" --service agno-demo
-[[ -n "$EXA_API_KEY" ]]       && railway variables set "EXA_API_KEY=${EXA_API_KEY}" --service agno-demo
-[[ -n "$PARALLEL_API_KEY" ]]  && railway variables set "PARALLEL_API_KEY=${PARALLEL_API_KEY}" --service agno-demo
-[[ -n "$GITHUB_TOKEN" ]]      && railway variables set "GITHUB_TOKEN=${GITHUB_TOKEN}" --service agno-demo
 
 echo ""
 echo -e "${BOLD}Creating volumes...${NC}"
 echo ""
-railway volume add --service agno-demo --mount /workspace
-railway volume add --service agno-demo --mount /documents
+railway volume add -m /workspace 2>/dev/null || echo -e "${DIM}Volume already exists or skipped${NC}"
+railway volume add -m /documents 2>/dev/null || echo -e "${DIM}Volume already exists or skipped${NC}"
 
 echo ""
 echo -e "${BOLD}Deploying application...${NC}"
