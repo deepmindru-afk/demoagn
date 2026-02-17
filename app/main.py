@@ -35,6 +35,7 @@ agent_os = AgentOS(
     name="AgentOS",
     tracing=True,
     scheduler=True,
+    scheduler_base_url="http://127.0.0.1:8000",
     db=get_postgres_db(),
     agents=[guard, relay, sentinel, knowledge_agent, mcp_agent, dash, gcode, pal, scout, seek],
     teams=[research_team],
