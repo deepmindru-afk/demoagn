@@ -1,4 +1,4 @@
-# AgentOS Demo
+# Agno Demo
 
 A multi-agent system built with [Agno](https://docs.agno.com), deployable to Railway.
 
