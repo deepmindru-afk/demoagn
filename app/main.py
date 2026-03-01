@@ -23,6 +23,7 @@ from agents.relay import relay
 from agents.scout import scout
 from agents.seek import seek
 from agents.sentinel import sentinel
+from agents.support import support
 from app.registry import registry
 from db import get_postgres_db
 from teams.research import research_team
@@ -37,7 +38,7 @@ agent_os = AgentOS(
     scheduler=True,
     scheduler_base_url="http://127.0.0.1:8000",
     db=get_postgres_db(),
-    agents=[guard, relay, sentinel, knowledge_agent, mcp_agent, dash, gcode, pal, scout, seek],
+    agents=[guard, relay, sentinel, support, knowledge_agent, mcp_agent, dash, gcode, pal, scout, seek],
     teams=[research_team],
     workflows=[daily_brief_workflow],
     registry=registry,

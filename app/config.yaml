@@ -41,6 +41,11 @@ chat:
       - "Find the incident response runbook"
       - "How do I request a new laptop?"
 
+    support:
+      - "Can you check the status of order ORD-1098?"
+      - "What's your return policy?"
+      - "I'd like a refund on order ORD-1042"
+
     sentinel:
       - "Process a $250 refund for customer C-1042 due to a billing error"
       - "Export all data for customer C-3021 for a GDPR request"
